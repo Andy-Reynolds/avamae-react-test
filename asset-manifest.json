@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.js": "/avamae-react-test/static/js/main.be7c8bb9.js",
+    "main.css": "/avamae-react-test/static/css/main.31d6cfe0.css",
+    "main.js": "/avamae-react-test/static/js/main.cfee2e9a.js",
     "index.html": "/avamae-react-test/index.html",
-    "main.be7c8bb9.js.map": "/avamae-react-test/static/js/main.be7c8bb9.js.map"
+    "main.cfee2e9a.js.map": "/avamae-react-test/static/js/main.cfee2e9a.js.map"
   },
   "entrypoints": [
-    "static/js/main.be7c8bb9.js"
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.cfee2e9a.js"
   ]
 }
