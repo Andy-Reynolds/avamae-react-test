@@ -1,0 +1,21 @@
+.navbar {
+  border: solid black 2px;
+  display: flex;
+
+  &__logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__links-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    &__links-container {
+      display: flex;
+    }
+  }
+}
