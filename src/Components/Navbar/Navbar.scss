@@ -1,12 +1,13 @@
 @use "../../styles/_variables.scss" as *;
 
 .navbar {
-  border: solid black 2px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
 
   &__logo {
-    width: 100px;
-    height: 100px;
+    width: 10.5rem;
   }
 
   &__links-container {
@@ -14,10 +15,35 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $desktop-breakpoint) {
   .navbar {
+    justify-content: space-between;
+    width: 68%;
+
     &__links-container {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 26rem;
+    }
+
+    &__link {
+      color: $colour-font-dark;
+      font-size: 0.8rem;
+      letter-spacing: 0.075rem;
+      text-decoration: none;
+      // font-weight: bold;
+    }
+
+    &__log-in {
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 0.25rem;
+      height: 2.5rem;
+      width: 6rem;
+      font-weight: bold;
+      background-color: $colour-light-blue;
+      color: $colour-dark-blue;
     }
   }
 }
