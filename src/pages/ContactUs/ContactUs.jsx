@@ -1,7 +1,12 @@
 import React from "react";
+import Layout from "../../Components/Layout/Layout";
 
 const ContactUs = () => {
-  return <div>ContactUs</div>;
+  return (
+    <Layout>
+      <div>Contact Us</div>
+    </Layout>
+  );
 };
 
 export default ContactUs;
