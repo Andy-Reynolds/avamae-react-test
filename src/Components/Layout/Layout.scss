@@ -8,6 +8,16 @@
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .layout {
+    &__content {
+      width: 68%;
+      padding: 0rem;
+    }
   }
 }
