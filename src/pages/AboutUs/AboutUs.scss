@@ -1,0 +1,42 @@
+@use "../../styles/_variables.scss" as *;
+
+.about {
+  margin: 2rem 0rem;
+
+  &__heading {
+    font-size: 1.5rem;
+  }
+
+  &__link {
+    color: $colour-dark-blue;
+  }
+
+  &__image {
+    width: 100%;
+    margin: 2rem 0rem;
+  }
+
+  &__sub-heading--two {
+    margin: 1rem 0rem;
+  }
+
+  &__list {
+    font-weight: bold;
+    padding-left: 1rem;
+  }
+
+  &__list-item {
+    margin: 0.5rem 0rem;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .about {
+    &__image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 55%;
+    }
+  }
+}

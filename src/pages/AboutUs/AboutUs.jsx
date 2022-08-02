@@ -1,11 +1,14 @@
 import React from "react";
+import "./AboutUs.scss";
 import Layout from "../../Components/Layout/Layout";
+import office from "../../assets/images/shutterstock_696636415.jpg";
 
 const AboutUs = () => {
   return (
     <Layout>
       <div className="about">
         <h1 className="about__heading">About Us</h1>
+        <br />
         <h2 className="about__sub-heading about__sub-heading--one">
           Populo facilisi nam no, dolor deleniti deseruisse ne cum, nam quodsi
           aliquam eligendi ne. Ferri euismod accusata te nec, summo accumsan at
@@ -24,6 +27,7 @@ const AboutUs = () => {
           </a>{" "}
           mollis, felis ut convallis convallis.
         </p>
+        <br />
         <p className="about__paragraph">
           Quisque non lectus dolor. In id dictum ex. Aenean laoreet velit sem,
           in dictum orci cursus sit amet. Duis ex est, aliquam quis tincidunt
@@ -36,7 +40,7 @@ const AboutUs = () => {
           fringilla metus, a tempus metus nunc a sem. Morbi ut metus tincidunt,
           mollis orci quis, efficitur nibh.
         </p>
-        <img className="about__image" src="" alt="Office" />
+        <img className="about__image" src={office} alt="Office" />
         <p className="about__paragraph">
           Integer ullamcorper nisi non ultricies consequat. Mauris at ipsum vel
           erat fringilla placerat ut eget nibh. Mauris vehicula a lectus
@@ -69,6 +73,7 @@ const AboutUs = () => {
             Ut indoctum patrioque voluptaria duo, ut vis semper abhorreant
           </li>
         </ul>
+        <br />
         <p className="about__paragraph">
           Suspendisse vel nisi id odio consequat aliquam quis ac nisl.
           Vestibulum orci enim, porta viverra egestas laoreet, sollicitudin et
@@ -77,6 +82,7 @@ const AboutUs = () => {
           tincidunt. Suspendisse quis augue eget quam ullamcorper ultricies sed
           non justo.
         </p>
+        <br />
         <p className="about__paragraph">
           Maecenas eu mauris felis. Pellentesque habitant morbi tristique
           senectus et netus et malesuada fames ac turpis egestas. Vestibulum
