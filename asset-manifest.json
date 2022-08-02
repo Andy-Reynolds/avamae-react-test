@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/avamae-react-test/static/css/main.1a215528.css",
-    "main.js": "/avamae-react-test/static/js/main.607697e3.js",
+    "main.css": "/avamae-react-test/static/css/main.8b4706c6.css",
+    "main.js": "/avamae-react-test/static/js/main.7fbf29d7.js",
     "static/media/Logo.svg": "/avamae-react-test/static/media/Logo.68f909ac77b89928e0b40c7a15f40f5f.svg",
     "index.html": "/avamae-react-test/index.html",
-    "main.1a215528.css.map": "/avamae-react-test/static/css/main.1a215528.css.map",
-    "main.607697e3.js.map": "/avamae-react-test/static/js/main.607697e3.js.map"
+    "main.8b4706c6.css.map": "/avamae-react-test/static/css/main.8b4706c6.css.map",
+    "main.7fbf29d7.js.map": "/avamae-react-test/static/js/main.7fbf29d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a215528.css",
-    "static/js/main.607697e3.js"
+    "static/css/main.8b4706c6.css",
+    "static/js/main.7fbf29d7.js"
   ]
 }
