@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/avamae-react-test/static/css/main.84ef03a8.css",
+    "main.css": "/avamae-react-test/static/css/main.561c0e0a.css",
     "main.js": "/avamae-react-test/static/js/main.bd331c65.js",
     "static/media/shutterstock_696636415.jpg": "/avamae-react-test/static/media/shutterstock_696636415.c1d102cec941fac6a862.jpg",
     "static/media/Logo.svg": "/avamae-react-test/static/media/Logo.68f909ac77b89928e0b40c7a15f40f5f.svg",
     "index.html": "/avamae-react-test/index.html",
-    "main.84ef03a8.css.map": "/avamae-react-test/static/css/main.84ef03a8.css.map",
+    "main.561c0e0a.css.map": "/avamae-react-test/static/css/main.561c0e0a.css.map",
     "main.bd331c65.js.map": "/avamae-react-test/static/js/main.bd331c65.js.map"
   },
   "entrypoints": [
-    "static/css/main.84ef03a8.css",
+    "static/css/main.561c0e0a.css",
     "static/js/main.bd331c65.js"
   ]
 }
