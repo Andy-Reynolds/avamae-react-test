@@ -1,0 +1,23 @@
+@use "../../styles/_variables.scss" as *;
+
+.swiper {
+  border: 2px solid black;
+  width: 100vw;
+  // height: 42%;
+  height: 63vh;
+}
+
+.swiper-wrapper {
+  border: 2px solid blue;
+}
+
+.swiper-slide {
+  border: 2px solid red;
+  width: 4rem;
+  overflow: hidden;
+}
+
+.carousel__image {
+  height: 100%;
+  margin-left: -7rem;
+}

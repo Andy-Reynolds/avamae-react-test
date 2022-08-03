@@ -1,21 +1,28 @@
-import React from "react";
-import Swiper from "react-id-swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
+import "swiper/scss";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./Carousel.scss";
+import homeImage from "../../assets/images/shutterstock_407632243.jpg";
 
-const Carousel = () => {
-  const params = {
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-  };
+const Carousel = ({ homeObj }) => {
+  console.log(homeObj.Details);
+
   return (
-    <Swiper {...params}>
-      <div>Slide #1</div>
-      <div>Slide #2</div>
-      <div>Slide #3</div>
-      <div>Slide #4</div>
-      <div>Slide #5</div>
+    <Swiper
+      modules={[Navigation, Pagination]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+    >
+      <SwiperSlide>
+        <img className="carousel__image" src={homeImage} alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img className="carousel__image" src={homeImage} alt="" />
+      </SwiperSlide>
     </Swiper>
   );
 };
