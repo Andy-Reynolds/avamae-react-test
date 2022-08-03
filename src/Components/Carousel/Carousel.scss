@@ -17,6 +17,17 @@
   overflow: hidden;
 }
 
+.carousel__slide {
+  height: 100%;
+  position: relative;
+}
+
+.carousel__content {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+}
+
 .carousel__image {
   height: 100%;
   margin-left: -7rem;

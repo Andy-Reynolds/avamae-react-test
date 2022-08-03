@@ -4,9 +4,10 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Home from "./pages/Home/Home";
 import { useState, useEffect } from "react";
+import mockData from "./assets/mockdata/data";
 
 function App() {
-  const [homeObj, setHomeObj] = useState({});
+  const [homeObj, setHomeObj] = useState(mockData);
 
   const url =
     "https://interview-assessment.api.avamae.co.uk/api/v1/home/banner-details";
