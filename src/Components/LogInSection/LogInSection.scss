@@ -44,3 +44,18 @@
     color: $colour-dark-blue;
   }
 }
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .log-in-section {
+    height: 54vh;
+    &__content {
+      width: 30%;
+      margin-left: -40%;
+      padding: 2rem;
+    }
+
+    &__paragraph {
+      margin: 2rem 0rem;
+    }
+  }
+}
