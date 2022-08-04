@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column-reverse;
 
+  &__content {
+    height: auto;
+  }
+
   &__image-container {
     width: 100%;
     margin: 0.8rem 0rem;
