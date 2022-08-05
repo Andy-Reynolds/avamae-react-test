@@ -1,6 +1,103 @@
 @use "../../styles/_variables.scss" as *;
 
 .form {
-  border: 2px solid black;
-  // z-index: -1;
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0rem;
+
+    &--address-extras {
+      width: 46%;
+    }
+  }
+
+  &__label {
+    margin: 0.2rem 0rem;
+    font-size: 00.8rem;
+  }
+
+  &__checkbox {
+    margin: 0.5rem 0.5rem 0.5rem 0rem;
+  }
+
+  &__fade {
+    font-size: 0.7rem;
+    opacity: 0.7;
+
+    &--message {
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  &__input {
+    background-color: rgb(0, 0, 0, 0.05);
+    height: 2rem;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 0.2rem;
+
+    &--address-extras {
+      display: flex;
+    }
+
+    &--message {
+      height: 8rem;
+    }
+  }
+
+  &__address-extras-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__submit-icon {
+    height: 0.8rem;
+  }
+
+  &__button {
+    background-color: $colour-light-blue;
+    color: $colour-dark-blue;
+    width: 100%;
+    padding: 0.5rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    font-size: 00.8rem;
+    margin: 0.5rem 0rem;
+
+    &--submit {
+      margin-top: 1rem;
+      background-color: $colour-dark-blue;
+      color: $colour-font-light;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .form {
+    &__address-line-container {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__input {
+      &--address-lines {
+        width: 100%;
+      }
+    }
+
+    &__input-container {
+      &--address-extras {
+        width: 21%;
+      }
+    }
+  }
 }

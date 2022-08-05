@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Form.scss";
+import submitIcon from "../../assets/svgs/Icon_Submit.svg";
 
 const Form = () => {
   const url =
@@ -28,28 +29,37 @@ const Form = () => {
     console.log(showAddress);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     console.log("sumbit");
     event.preventDefault();
-    axios
-      .post(url, {
-        FullName: data.FullName,
-        EmailAddress: data.EmailAddress,
-        PhoneNumbers: [data.PhoneNumbers],
-        Message: data.Message,
-        bIncludeAddressDetails: true,
-        AddressDetails: {
-          AddressLine1: data.AddressLine1,
-          AddressLine2: data.AddressLine2,
-          CityTown: data.CityTown,
-          StateCounty: data.StateCounty,
-          Postcode: data.Postcode,
-          Country: data.Country,
-        },
-      })
-      .then((result) => {
-        console.log(result.data);
-      });
+    try {
+      const response = await axios.post(
+        url,
+        JSON.stringify({
+          FullName: data.FullName,
+          EmailAddress: data.EmailAddress,
+          PhoneNumbers: [data.PhoneNumbers],
+          Message: data.Message,
+          bIncludeAddressDetails: true,
+          AddressDetails: {
+            AddressLine1: data.AddressLine1,
+            AddressLine2: data.AddressLine2,
+            CityTown: data.CityTown,
+            StateCounty: data.StateCounty,
+            Postcode: data.Postcode,
+            Country: data.Country,
+          },
+        }),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(response);
+    } catch (err) {
+      console.log("failed");
+    }
   };
 
   const handleChange = (event) => {
@@ -61,9 +71,12 @@ const Form = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="FullName">Full name</label>
+      <div className="form__input-container">
+        <label className="form__label" htmlFor="FullName">
+          Full name
+        </label>
         <input
+          className="form__input"
           onChange={handleChange}
           value={data.FullName}
           type="text"
@@ -71,9 +84,12 @@ const Form = () => {
           required
         />
       </div>
-      <div>
-        <label htmlFor="EmailAddress">Email address</label>
+      <div className="form__input-container">
+        <label className="form__label" htmlFor="EmailAddress">
+          Email address
+        </label>
         <input
+          className="form__input"
           onChange={handleChange}
           value={data.EmailAddress}
           type="text"
@@ -81,21 +97,28 @@ const Form = () => {
           required
         />
       </div>
-      <div>
-        <label htmlFor="PhoneNumbers">Phone number 01 - optional</label>
+      <div className="form__input-container">
+        <label className="form__label" htmlFor="PhoneNumbers">
+          Phone number 01 <span className="form__fade">- optional</span>
+        </label>
         <input
+          className="form__input"
           onChange={handleChange}
           value={[data.PhoneNumbers]}
           type="text"
           id="PhoneNumbers"
         />
       </div>
-      <button>Add new phone number</button>
-      <div>
-        <label htmlFor="Message">
-          Message - Maximum text length is 500 characters
+      <button className="form__button">Add new phone number</button>
+      <div className="form__input-container">
+        <label className="form__label" htmlFor="Message">
+          Message{" "}
+          <span className="form__fade form__fade--message">
+            - Maximum text length is 500 characters
+          </span>
         </label>
         <input
+          className="form__input form__input--message"
           onChange={handleChange}
           value={data.Message}
           type="text"
@@ -103,25 +126,38 @@ const Form = () => {
         />
       </div>
       <div>
-        <input type="checkbox" id="add-address" onChange={handleAddressClick} />
-        <label htmlFor="add-address">Add address details</label>
+        <input
+          className="form__checkbox"
+          type="checkbox"
+          id="add-address"
+          onChange={handleAddressClick}
+        />
+        <label className="form__label" htmlFor="add-address">
+          Add address details
+        </label>
       </div>
 
       {showAddress && (
-        <div className="address-container">
-          <div className="adddress-line-container">
-            <div>
-              <label htmlFor="AddressLine1">Address line 1</label>
+        <div className="form__address-container">
+          <div className="form__address-line-container">
+            <div className="form__input-container">
+              <label className="form__label" htmlFor="AddressLine1">
+                Address line 1
+              </label>
               <input
+                className="form__input form__input--address-lines"
                 onChange={handleChange}
                 value={data.AddressDetails.AddressLine1}
                 type="text"
                 id="AddressLine1"
               />
             </div>
-            <div>
-              <label htmlFor="AddressLine2">Address line 2</label>
+            <div className="form__input-container">
+              <label className="form__label" htmlFor="AddressLine2">
+                Address line 2 <span className="form__fade">- optional</span>
+              </label>
               <input
+                className="form__input form__input--address-lines"
                 onChange={handleChange}
                 value={data.AddressDetails.AddressLine2}
                 type="text"
@@ -129,37 +165,49 @@ const Form = () => {
               />
             </div>
           </div>
-          <div className="adddress-extras-container">
-            <div>
-              <label htmlFor="CityTown">City/Town</label>
+          <div className="form__address-extras-container">
+            <div className="form__input-container form__input-container--address-extras">
+              <label className="form__label" htmlFor="CityTown">
+                City/Town
+              </label>
               <input
+                className="form__input form__input--address-extras"
                 onChange={handleChange}
                 value={data.AddressDetails.CityTown}
                 type="text"
                 id="CityTown"
               />
             </div>
-            <div>
-              <label htmlFor="StateCounty">State/County</label>
+            <div className="form__input-container form__input-container--address-extras">
+              <label className="form__label" htmlFor="StateCounty">
+                State/County
+              </label>
               <input
+                className="form__input form__input--address-extras"
                 onChange={handleChange}
                 value={data.AddressDetails.StateCounty}
                 type="text"
                 id="StateCounty"
               />
             </div>
-            <div>
-              <label htmlFor="Postcode">Postcode</label>
+            <div className="form__input-container form__input-container--address-extras">
+              <label className="form__label" htmlFor="Postcode">
+                Postcode
+              </label>
               <input
+                className="form__input form__input--address-extras"
                 onChange={handleChange}
                 value={data.AddressDetails.Postcode}
                 type="text"
                 id="Postcode"
               />
             </div>
-            <div>
-              <label htmlFor="Country">Country</label>
+            <div className="form__input-container form__input-container--address-extras">
+              <label className="form__label" htmlFor="Country">
+                Country
+              </label>
               <input
+                className="form__input form__input--address-extras"
                 onChange={handleChange}
                 value={data.AddressDetails.Country}
                 type="text"
@@ -169,7 +217,14 @@ const Form = () => {
           </div>
         </div>
       )}
-      <button type="submit">Submit</button>
+      <button
+        className="form__submit form__button form__button--submit"
+        type="submit"
+      >
+        <img className="form__submit-icon" src={submitIcon} alt="sumbit" />
+        Submit
+        <div></div>
+      </button>
     </form>
   );
 };
