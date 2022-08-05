@@ -1,9 +1,7 @@
 import "./LogInSection.scss";
 import logInImage from "../../assets/images/shutterstock_1302552622.jpg";
 
-const LogInSection = ({ homeObj }) => {
-  console.log(homeObj);
-
+const LogInSection = () => {
   return (
     <div className="log-in-section">
       <div className="log-in-section__content">
