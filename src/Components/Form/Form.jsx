@@ -12,7 +12,7 @@ const Form = () => {
     EmailAddress: "",
     PhoneNumbers: [""],
     Message: "",
-    bIncludeAddressDetails: true,
+    bIncludeAddressDetails: false,
     AddressDetails: {
       AddressLine1: "",
       AddressLine2: "",
@@ -38,9 +38,9 @@ const Form = () => {
         JSON.stringify({
           FullName: data.FullName,
           EmailAddress: data.EmailAddress,
-          PhoneNumbers: [data.PhoneNumbers],
+          PhoneNumbers: data.PhoneNumbers,
           Message: data.Message,
-          bIncludeAddressDetails: true,
+          bIncludeAddressDetails: false,
           AddressDetails: {
             AddressLine1: data.AddressLine1,
             AddressLine2: data.AddressLine2,
@@ -53,7 +53,9 @@ const Form = () => {
         {
           headers: {
             "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "http://localhost:3000",
           },
+          withCredentials: false,
         }
       );
       console.log(response);
@@ -65,6 +67,13 @@ const Form = () => {
   const handleChange = (event) => {
     const newData = { ...data };
     newData[event.target.id] = event.target.value;
+    setData(newData);
+    console.log(newData);
+  };
+
+  const handlePhoneNumberChange = (event) => {
+    const newData = { ...data };
+    newData[event.target.id][0] = event.target.value;
     setData(newData);
     console.log(newData);
   };
@@ -103,13 +112,14 @@ const Form = () => {
         </label>
         <input
           className="form__input"
-          onChange={handleChange}
-          value={[data.PhoneNumbers]}
+          onChange={handlePhoneNumberChange}
+          value={data.PhoneNumbers}
           type="text"
           id="PhoneNumbers"
+          required
         />
       </div>
-      <button className="form__button">Add new phone number</button>
+      {/* <button className="form__button">Add new phone number</button> */}
       <div className="form__input-container">
         <label className="form__label" htmlFor="Message">
           Message{" "}
@@ -123,6 +133,7 @@ const Form = () => {
           value={data.Message}
           type="text"
           id="Message"
+          required
         />
       </div>
       <div>
