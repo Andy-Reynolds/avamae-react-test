@@ -28,7 +28,6 @@ const Form = () => {
 
   const handleAddressClick = () => {
     setShowAddress(!showAddress);
-    console.log(showAddress);
   };
 
   const handleSubmit = async (event) => {
@@ -123,7 +122,7 @@ const Form = () => {
           </div>
           <div className="form__input-container">
             <label className="form__label" htmlFor="PhoneNumbers">
-              Phone number 01 <span className="form__fade">- optional</span>
+              Phone number 01
             </label>
             <input
               className="form__input"
@@ -142,14 +141,15 @@ const Form = () => {
                 - Maximum text length is 500 characters
               </span>
             </label>
-            <input
+            <textarea
               className="form__input form__input--message"
+              maxLength={500}
               onChange={handleChange}
               value={data.Message}
               type="text"
               id="Message"
               required
-            />
+            ></textarea>
           </div>
           <div>
             <input
