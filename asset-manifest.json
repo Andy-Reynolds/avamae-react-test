@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/avamae-react-test/static/css/main.49e092e2.css",
-    "main.js": "/avamae-react-test/static/js/main.9e767b00.js",
+    "main.css": "/avamae-react-test/static/css/main.1f7c221e.css",
+    "main.js": "/avamae-react-test/static/js/main.b616062d.js",
     "static/media/shutterstock_696636415.jpg": "/avamae-react-test/static/media/shutterstock_696636415.c1d102cec941fac6a862.jpg",
     "static/media/shutterstock_1302552622.jpg": "/avamae-react-test/static/media/shutterstock_1302552622.91e40a624bb420791313.jpg",
     "static/media/Logo.svg": "/avamae-react-test/static/media/Logo.68f909ac77b89928e0b40c7a15f40f5f.svg",
     "static/media/Img_Contact.png": "/avamae-react-test/static/media/Img_Contact.8d0da1307b809c7831d8.png",
     "static/media/Icon_Submit.svg": "/avamae-react-test/static/media/Icon_Submit.30f4a507991d7ad4b6f3646a97eda474.svg",
+    "static/media/Icon_Valid.svg": "/avamae-react-test/static/media/Icon_Valid.472b785881ca1ff030a76c2df83b765e.svg",
     "index.html": "/avamae-react-test/index.html",
-    "main.49e092e2.css.map": "/avamae-react-test/static/css/main.49e092e2.css.map",
-    "main.9e767b00.js.map": "/avamae-react-test/static/js/main.9e767b00.js.map"
+    "main.1f7c221e.css.map": "/avamae-react-test/static/css/main.1f7c221e.css.map",
+    "main.b616062d.js.map": "/avamae-react-test/static/js/main.b616062d.js.map"
   },
   "entrypoints": [
-    "static/css/main.49e092e2.css",
-    "static/js/main.9e767b00.js"
+    "static/css/main.1f7c221e.css",
+    "static/js/main.b616062d.js"
   ]
 }
